@@ -1,0 +1,187 @@
+.container {
+  margin-top: 70px;
+  color: whitesmoke;
+}
+
+/* Initially, these elements are hidden and shifted upward.
+   (They’ll animate into their final state once the .triggered class is added.) */
+.container h1,
+.container .line,
+.container .dateContainer,
+.container .listContainer {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* When .triggered is applied, animate the elements with staggered delays */
+/* Header animation */
+.triggered h1 {
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* Timeline vertical line animation */
+.triggered .line {
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.4s;
+}
+
+/* Date section animation */
+.triggered .dateContainer {
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.6s;
+}
+
+/* List container animation */
+.triggered .listContainer {
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.8s;
+}
+
+/* Other element definitions */
+.container h1 {
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin-bottom: 90px;
+}
+
+.container section {
+  display: flex;
+  align-content: center;
+  margin: auto;
+  width: 56%;
+}
+
+/* Vertical line container */
+.line {
+  position: relative;
+  height: 640px;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Blue fill indicator on the line */
+.indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  background-color: #0a6fe2;
+  transition: height 0.1s ease-out;
+  z-index: 0;
+}
+
+/* Elegant timeline markers (circles) */
+/* They start off at reduced opacity and scale, then animate to full size when visible */
+.circle, .second {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle, silver 50%, transparent 70%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Positioning the markers */
+.circle {
+  top: 90px;
+  right: -21px;
+}
+
+.second {
+  top: 400px;
+  right: -21px;
+}
+
+/* When isVisible is true, add this class to reveal the circles */
+.circleVisible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Date container styles */
+.dateContainer {
+  width: 110%;
+  margin-top: 90px;
+  list-style-type: none;
+}
+
+.dateContainer ul:last-child {
+  margin-top: 275px;
+}
+
+.date {
+  width: 110%;
+  list-style-type: none;
+}
+
+.date li {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.listContainer {
+  margin-left: 80px;
+}
+
+.paragraphs {
+  margin-top: 90px;
+  list-style-type: none;
+}
+
+.paragraphs:last-child {
+  margin-top: 110px;
+}
+
+.paragraphs li:first-child {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.paragraphs li:nth-child(2) {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: rgb(203, 172, 250);
+}
+
+.paragraphs li:nth-child(3) {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* Animate button spans */
+.buttons span {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Stagger delays for the button spans */
+.buttons span:nth-child(1) {
+  animation-delay: 1.1s;
+}
+.buttons span:nth-child(2) {
+  animation-delay: 1.3s;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 40px;
+}
+
+.buttons span:nth-child(2) {
+  margin-left: 20px;
+}
+
+/* Keyframes for fadeInUp effect (used on multiple elements) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

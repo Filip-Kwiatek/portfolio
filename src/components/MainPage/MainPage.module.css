@@ -1,0 +1,54 @@
+.background {
+  height: 250px;
+  background-color: #0d0d25;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.2) 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar container styled to mimic your design */
+.navbar {
+  position: fixed;
+  bottom: 0px; /* Slight gap from the bottom */
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  /* Semi-transparent background so that backdrop-filter can work */
+  background-color: rgba(21, 21, 21, 0.8);
+  border: 1px solid rgb(90, 90, 90);
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  transition: transform 0.3s ease-in-out;
+  /* The blur effect for everything behind the navbar */
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(20%);
+}
+
+/* When visible, slide it into view */
+.show {
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/* When hidden, slide it downward out of view */
+.hide {
+  transform: translateX(-50%) translateY(100%);
+}
+
+.navbar a {
+  color: rgb(234, 228, 253);
+  text-decoration: none;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  margin: 0 10px;
+}
+
+/* Hover effect */
+.navbar a:hover {
+  color: #ccc;
+}

@@ -1,0 +1,116 @@
+/* Initially hide key elements for the animation */
+.title,
+.sliderWrapper {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* When the container has the .triggered class, animate the child elements */
+
+/* Title animation */
+.triggered .title {
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* Slider wrapper animation */
+.triggered .sliderWrapper {
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.4s;
+}
+
+/* Title styling */
+.title {
+  margin-top: 140px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: whitesmoke;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Slider wrapper container */
+.sliderWrapper {
+  color: whitesmoke;
+  width: 70%;
+  height: 260px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Slider Track using flex layout */
+.sliderTrack {
+  display: flex;
+  animation: scroll linear infinite;
+  will-change: transform;
+}
+
+/* Each slide */
+.slide {
+  flex: auto;
+  width: 250px; /* Adjust as needed */
+  margin: 0 10px;
+  vertical-align: middle;
+  position: relative;
+  height: 235px;
+  border-radius: 10%;
+  background-color: rgb(15, 23, 42);
+  transition: transform 0.5s ease;
+}
+
+/* Slide caption */
+.slide p {
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Link styling */
+.slide a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.slide a:hover {
+  text-decoration: underline;
+}
+
+/* Image styles */
+.image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Slide hover scale effect */
+.slide:hover {
+  transform: scale(1.05);
+}
+
+/* Keyframes for continuous scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause scrolling when hovering over the sliderWrapper */
+.sliderWrapper:hover .sliderTrack {
+  animation-play-state: paused;
+}
+
+/* FadeInUp keyframes definition */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

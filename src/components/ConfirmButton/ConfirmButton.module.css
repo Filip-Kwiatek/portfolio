@@ -1,0 +1,61 @@
+.border {
+  position: relative; /* Required for the absolute positioning of the pseudo-element */
+  overflow: hidden; /* Keeps the animated gradient within the button */
+  display: flex; /* Centers the content inside the button */
+  justify-content: center;
+  align-items: center;
+  width: 385px;
+  height: 50px;
+  padding: 10px 20px;
+  background: rgb(8, 8, 28); /* Button background color */
+  cursor: pointer;
+  color: whitesmoke;
+  font-size: 24px;
+  font-weight: 600;
+  border: 2px solid rgb(53, 53, 56);
+  border-radius: 5px;
+  transition: border-bottom-color 0.3s ease; /* Smooth transition for bottom border color */
+}
+
+/* Pseudo-element for the shimmering hollow effect */
+.border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -100%; /* Starts off completely to the left */
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    transparent 42.5%,
+    /* Adjusted for a thinner effect; shimmer begins earlier */
+      rgba(255, 255, 255, 0.5) 50%,
+    /* The shimmering band (wider by ~5%) */ transparent 57.5%,
+    /* Ends shimmer a bit later */ transparent 100%
+  );
+  transform: skewX(-20deg); /* Adds an angled look for extra depth */
+  animation: hollow-slide 2.25s linear infinite; /* Endless animation */
+}
+
+/* Defines the sliding animation from left to right */
+@keyframes hollow-slide {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* On hover, change the bottom border to blue */
+.border:hover {
+  border-bottom-color: #003166; /* Blue color for the bottom border on hover */
+}
+
+/* Image styling within the button */
+.border img {
+  padding-top: 2px;
+  margin-left: 10px;
+  width: 20px;
+}

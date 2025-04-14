@@ -1,0 +1,227 @@
+.contactTitle {
+  scroll-margin-top: 0px;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  color: whitesmoke;
+  text-align: center;
+}
+
+/* The grid background styles remain unchanged */
+.grid {
+  height: 80vh;
+  width: 100%;
+  background-color: #0d0d25;
+  background-image: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 19px,
+      rgba(255, 255, 255, 0.1) 19px,
+      rgba(255, 255, 255, 0.1) 20px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 19px,
+      rgba(255, 255, 255, 0.1) 19px,
+      rgba(255, 255, 255, 0.1) 20px
+    );
+  z-index: -1;
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  margin: auto;
+}
+
+.imageContainer {
+  position: relative;
+  background-image: url("https://simpleprogrammer.com/wp-content/uploads/2023/05/Coding-Desk.jpg");
+  filter: brightness(80%);
+  background-size: 640px 480px;
+  margin-top: 50px;
+  width: 60%;
+  height: 480px;
+  overflow: hidden;
+  border: 2px solid #333;
+  border-radius: 5px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.overlayBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: auto;
+  width: 100%;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.overlayHeader {
+  margin: 0 0 10px;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.infoLabel {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+
+.infoValue {
+  font-size: 16px;
+  margin: 0;
+}
+
+.overlaySocial {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.overlaySocial a img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.overlaySocial a img:hover {
+  transform: scale(1.1);
+}
+
+.inputsContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  width: 35%;
+  margin-left: 30px;
+  height: 450px;
+  color: whitesmoke;
+  list-style-type: none;
+}
+
+.inputsContainer li label {
+  display: block;
+  margin-top: 6px;
+  margin-bottom: 5px;
+}
+
+.inputsContainer li input {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputsContainer li {
+  font-size: 15px;
+}
+
+.inputsContainer li:first-child {
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+}
+
+input {
+  width: 360px;
+  background-color: #222;
+  color: #ccc;
+  border: 2px solid #333;
+  box-shadow: 0 1px 0 0 #444, 1px 0 0 0 #444;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input::placeholder {
+  font-size: 15px;
+  color: #9b9999;
+}
+
+.inputsContainer li:nth-child(5) input {
+  height: 15px;
+  padding-bottom: 60px;
+}
+
+.inputsContainer li:nth-child(6) {
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.notification {
+  color: red;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+}
+
+.line {
+  height: 2px;
+  background-color: #464646;
+  margin: 32px auto;
+  width: 386px;
+}
+
+/* Initially, the key elements (title and grid) are hidden and shifted upward from below. */
+.wrapper .contactTitle,
+.wrapper .grid {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* When the .triggered class is added, animate these elements in a staggered fashion */
+.triggered .contactTitle {
+  animation: fadeInBottom 0.6s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.triggered .grid {
+  animation: fadeInBottom 0.6s ease forwards;
+  animation-delay: 0.4s;
+}
+
+/* Keyframes for fadeInBottom (coming from the bottom) */
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
