@@ -31,24 +31,21 @@ const History = React.forwardRef((props, ref) => {
         <section className={classes.paragraphs}>
           <h2>My History</h2>
           <p>
-            Curabitur sed odio tempor, bibendum sem eu, consectetur est.
-            Vestibulum rhoncus cursus risus a ultrices. Quisque tellus libero,
-            finibus a vehicula ac, euismod eleifend dui. Nunc bibendum lacus
-            nisl, non imperdiet sem fringilla nec. Proin a tristique sapien. Ut
-            vestibulum dolor suscipit odio gravida, in bibendum nisl aliquet.
-            Maecenas sollicitudin augue diam, eget interdum lacus maximus vel.
-            Phasellus euismod sed eros vitae convallis.
+            I embarked on my software development journey in June 2021, during
+            the height of the global lockdown. Without a mentor or formal
+            classroom setting, I embraced the challenges of self-directed
+            learning in a time when programming was entirely new to me.
           </p>
           <p>
-            Praesent eu luctus arcu. Donec pellentesque, leo eu sodales
-            pharetra, mi tortor accumsan nulla, malesuada finibus risus justo
-            sed turpis. Sed id eros a est rutrum ullamcorper. Proin in pharetra
-            diam. Etiam dolor erat, porta a quam non, viverra euismod nisl. Duis
-            mi nulla, rhoncus a metus at, pharetra sodales massa. Donec
-            scelerisque est ut dolor elementum sollicitudin.
+            Growing up in a rural area with limited resources fueled my
+            determination to seek knowledge online and immerse myself fully in
+            the world of coding. Today, that initial spark has evolved into
+            expertise—particularly in modern frameworks such as React and
+            Next.js—allowing me to build sophisticated software independently
+            while leveraging my background as a unique strength.
           </p>
           <p id="hidden" className={classes.quote}>
-            Morbi a nibh porttitor, varius sapien ac.
+            "Obstacles? I call them features!"
           </p>
         </section>
         <img

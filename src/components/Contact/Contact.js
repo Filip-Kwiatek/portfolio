@@ -9,9 +9,9 @@ const Contact = React.forwardRef((props, ref) => {
     name: "",
     email: "",
     subject: "",
-    message: ""
+    message: "",
   });
-  const [error, setError] = useState(""); 
+  const [error, setError] = useState("");
 
   const handleMouseEnter = () => {
     if (!hoverTriggered) {
@@ -21,27 +21,28 @@ const Contact = React.forwardRef((props, ref) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Basic validations:
-    if (!formData.email.includes("@") ||
-        formData.subject.trim().length <= 4 ||
-        formData.message.trim().length <= 12) {
+    if (
+      !formData.email.includes("@") ||
+      formData.subject.trim().length <= 4 ||
+      formData.message.trim().length <= 12
+    ) {
       setError("Please fill all inputs!");
       return;
     }
-    setError(""); // Clear error if validations pass
+    setError(""); 
 
     emailjs
       .send(
-        "YOUR_SERVICE_ID",   // Replace with your EmailJS service ID
-        "YOUR_TEMPLATE_ID",  // Replace with your EmailJS template ID
+        "YOUR_SERVICE_ID", 
+        "YOUR_TEMPLATE_ID", 
         formData,
-        "YOUR_USER_ID"       // Replace with your EmailJS user/public key
+        "YOUR_USER_ID" 
       )
       .then(
         (result) => {
@@ -56,7 +57,9 @@ const Contact = React.forwardRef((props, ref) => {
 
   return (
     <div
-      className={`${classes.wrapper} ${hoverTriggered ? classes.triggered : ""}`}
+      className={`${classes.wrapper} ${
+        hoverTriggered ? classes.triggered : ""
+      }`}
       onMouseEnter={handleMouseEnter}
     >
       <h1 className={classes.contactTitle} ref={ref}>
@@ -64,17 +67,16 @@ const Contact = React.forwardRef((props, ref) => {
       </h1>
       <div className={classes.grid}>
         <div className={classes.contactContainer}>
-          {/* The image container mimicking a digital screen */}
           <span className={classes.imageContainer}>
             <div className={classes.overlay}>
               <div className={classes.overlayBottom}>
                 <div className={classes.leftColumn}>
-                  <h3 className={classes.overlayHeader}>
-                    Nullam varius mi sit amet
-                  </h3>
+                  <h3 className={classes.overlayHeader}>My Socials!</h3>
                   <div className={classes.infoBlock}>
                     <p className={classes.infoLabel}>Email</p>
-                    <p className={classes.infoValue}>exampleMail@mail.com</p>
+                    <p className={classes.infoValue}>
+                      filip.kwiatek.pl@gmail.com
+                    </p>
                   </div>
                   <div className={classes.infoBlock}>
                     <p className={classes.infoLabel}>Address</p>
@@ -101,29 +103,14 @@ const Contact = React.forwardRef((props, ref) => {
                     >
                       <img src="/path/to/linkedin_icon.png" alt="LinkedIn" />
                     </a>
-                    <a
-                      href="https://twitter.com/username"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src="/path/to/twitter_icon.png" alt="Twitter" />
-                    </a>
-                    <a
-                      href="https://instagram.com/username"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <img src="/path/to/instagram_icon.png" alt="Instagram" />
-                    </a>
                   </div>
                 </div>
               </div>
             </div>
           </span>
-          {/* Form with basic validations */}
           <form onSubmit={handleSubmit} className={classes.inputsContainer}>
             <li>
-              Nullam varius mi sit amet mauris laoreet, ut tempus mauris scelerisque.
+              Leave your email and I will contact with You As Soon As Possible!
             </li>
             <li>
               <label>Name</label>

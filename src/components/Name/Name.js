@@ -17,20 +17,22 @@ const Name = React.forwardRef((props, ref) => {
             src={
               "https://img.icons8.com/?size=100&id=yWPQb8LmzaLJ&format=png&color=FFFFFF"
             }
-            alt={"Send icon"}
+            alt="Send icon"
           >
             Say Hi
           </CustomButton>
         </span>
         <span>
-          <CustomButton
-            src={
-              "https://img.icons8.com/?size=100&id=20FjgTazh8FG&format=png&color=FFFFFF"
-            }
-            alt={"Download icon"}
-          >
-            Resume
-          </CustomButton>
+          <a href="/resume" target="_blank" rel="noopener noreferrer">
+            <CustomButton
+              src={
+                "https://img.icons8.com/?size=100&id=20FjgTazh8FG&format=png&color=FFFFFF"
+              }
+              alt="Download icon"
+            >
+              Resume
+            </CustomButton>
+          </a>
         </span>
       </div>
     </div>

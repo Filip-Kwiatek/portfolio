@@ -12,7 +12,9 @@ const Opinions = () => {
 
   return (
     <div
-      className={`${classes.wrapper} ${hoverTriggered ? classes.triggered : ""}`}
+      className={`${classes.wrapper} ${
+        hoverTriggered ? classes.triggered : ""
+      }`}
       onMouseEnter={handleMouseEnter}
     >
       <div className={classes.container}>
@@ -27,12 +29,11 @@ const Opinions = () => {
                 src="https://img.icons8.com/?size=100&id=93323&format=png&color=FFFFFF"
                 alt="quotation-mark"
               />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              consectetur ligula in volutpat fringilla. Morbi sollicitudin
-              consequat leo quis feugiat. Integer sed venenatis magna. Sed felis
-              nunc, vulputate eget tincidunt eu, porttitor efficitur nulla.
-              Fusce egestas urna ac elit efficitur, nec pellentesque diam
-              vulputate
+              Filip is a resourceful problem solver and quick learner whose
+              eagerness to tackle challenges makes him a standout asset in
+              fast-paced environments. He delivers quality work under pressure,
+              demonstrating remarkable dedication. I would gladly work with him
+              again and highly recommend him.
               <img
                 className={classes.quote}
                 src="https://img.icons8.com/?size=100&id=m5rn4PuJNgOn&format=png&color=FFFFFF"
@@ -47,8 +48,8 @@ const Opinions = () => {
                 />
               </span>
               <ul className={classes.aboutPersonContainer}>
-                <li>Name</li>
-                <li>Title of Person</li>
+                <li>Maciek</li>
+                <li>Lead of the Project</li>
               </ul>
             </div>
           </div>
@@ -59,12 +60,11 @@ const Opinions = () => {
                 src="https://img.icons8.com/?size=100&id=93323&format=png&color=FFFFFF"
                 alt="quotation-mark"
               />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              consectetur ligula in volutpat fringilla. Morbi sollicitudin
-              consequat leo quis feugiat. Integer sed venenatis magna. Sed felis
-              nunc, vulputate eget tincidunt eu, porttitor efficitur nulla.
-              Fusce egestas urna ac elit efficitur, nec pellentesque diam
-              vulputate
+              At Demant, he excelled as a Software Tester—executing performance,
+              exploratory, and functionality tests, contributing to SAFe
+              planning sessions, and implementing basic automation tests. His
+              technical excellence and agile mindset make him a hardworking,
+              driven, and dedicated asset to any team.
               <img
                 className={classes.quote}
                 src="https://img.icons8.com/?size=100&id=m5rn4PuJNgOn&format=png&color=FFFFFF"
@@ -79,8 +79,8 @@ const Opinions = () => {
                 />
               </span>
               <ul className={classes.aboutPersonContainer}>
-                <li>Name</li>
-                <li>Title of Person</li>
+                <li>Paulina</li>
+                <li>Test Manager</li>
               </ul>
             </div>
           </div>

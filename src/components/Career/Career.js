@@ -106,25 +106,23 @@ const Career = React.forwardRef((props, ref) => {
 
         <div className={classes.listContainer}>
           <ul className={classes.paragraphs}>
-            <li>Manual Tester</li>
             <li>Test Specialist</li>
+            <li>LionBridge Company</li>
             <li>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              sit amet turpis non nibh varius ornare. Donec elementum diam ac
-              accumsan aliquet. Quisque condimentum augue vel ex fermentum, nec
-              semper massa mattis. Pellentesque dictum pellentesque risus ac
-              efficitur.
+              At Lionbridge Poland, I served as a Test Specialist, conducting
+              manual tests with Jira and Confluence in a SCRUM/Kanban setting. I
+              developed test scenarios, tracked defects, and reproduced
+              user-reported issues, sharpening my QA skills and agile mindset.
             </li>
           </ul>
           <ul className={classes.paragraphs}>
-            <li>Manual Tester</li>
-            <li>Test Specialist</li>
+            <li>Software Tester</li>
+            <li>Demant</li>
             <li>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              sit amet turpis non nibh varius ornare. Donec elementum diam ac
-              accumsan aliquet. Quisque condimentum augue vel ex fermentum, nec
-              semper massa mattis. Pellentesque dictum pellentesque risus ac
-              efficitur.
+              At Demant, I worked as a Software Tester, executing performance,
+              exploratory, and functionality tests while taking part in SAFe
+              planning sessions and conducting basic automation tests. This role
+              refined my technical expertise and agile collaboration skills.
             </li>
           </ul>
         </div>

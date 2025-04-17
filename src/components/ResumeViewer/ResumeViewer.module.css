@@ -1,0 +1,10 @@
+.resumeWrapper {
+  width: 100%;
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+.resume {
+  width: 100%;
+  height: 1000px; /* The height of the resume container (1700px minus some extra spacing if desired) */
+  margin: 0 auto;  /* Center the resume content if desired */
+}
